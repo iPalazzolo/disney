@@ -27,6 +27,7 @@ public class PeliculaEntity {
 
     private Integer calificacion;
 
+    // Para la relación N-M de Películas con Personajes
     @ManyToMany(fetch = FetchType.EAGER,
         cascade = {
             CascadeType.PERSIST,
@@ -37,6 +38,11 @@ public class PeliculaEntity {
             inverseJoinColumns = { @JoinColumn(name = "personaje_id") })
     private Set<PersonajeEntity> personajes;
 
-    @OneToMany(mappedBy = "peliculas", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<GeneroEntity> generos;
+    // Para la relación 1-N de Películas con Género
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "genero_id", insertable = false, updatable = false)
+    private GeneroEntity genero;
+
+    @Column(name = "genero_id", nullable = false)
+    private Long generoId;
 }

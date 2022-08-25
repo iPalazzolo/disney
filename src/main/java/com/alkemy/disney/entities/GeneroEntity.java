@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "Genero")
@@ -20,7 +19,9 @@ public class GeneroEntity {
 
     private String imagen;
 
-    @ManyToOne()
+    /*
+    @ManyToOne
     @JoinColumn(name = "pelicula_id")
     private Set<PeliculaEntity> peliculas;
+     */
 }
