@@ -12,7 +12,7 @@
 	<artifactId>disney</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>disney</name>
-	<description>Challenge de Alkmey con personajes de Disney, Septiembre 2022</description>
+	<description>Challenge de Alkemy con personajes de Disney, Septiembre 2022</description>
 	<properties>
 		<java.version>18</java.version>
 	</properties>

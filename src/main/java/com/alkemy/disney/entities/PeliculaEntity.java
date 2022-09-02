@@ -1,7 +1,6 @@
 package com.alkemy.disney.entities;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -25,7 +24,7 @@ public class PeliculaEntity {
     @DateTimeFormat(pattern = "yyyy/MM/dd")
     private LocalDate fechaEstreno;
 
-    private Integer calificacion;
+    private Double calificacion;
 
     // Para la relación N-M de Películas con Personajes
     @ManyToMany(fetch = FetchType.EAGER,

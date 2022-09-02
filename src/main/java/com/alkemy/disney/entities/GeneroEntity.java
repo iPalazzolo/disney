@@ -18,10 +18,4 @@ public class GeneroEntity {
     private String nombre;
 
     private String imagen;
-
-    /*
-    @ManyToOne
-    @JoinColumn(name = "pelicula_id")
-    private Set<PeliculaEntity> peliculas;
-     */
 }
