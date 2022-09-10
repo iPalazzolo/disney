@@ -4,6 +4,9 @@ import com.alkemy.disney.dtos.PeliculaDTO;
 import com.alkemy.disney.entities.PeliculaEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class PeliculaMapper {
 
@@ -28,5 +31,14 @@ public class PeliculaMapper {
         dto.setCalificacion(entity.getCalificacion());
         dto.setGeneroId(entity.getGeneroId());
         return dto;
+    }
+
+    public List<PeliculaDTO> peliculaEntityList2DTO(List<PeliculaEntity> entityList) {
+        List<PeliculaDTO> dtoList = new ArrayList<>();
+
+        for(PeliculaEntity entity: entityList)
+            dtoList.add(peliculaEntity2DTO(entity));
+
+        return dtoList;
     }
 }
