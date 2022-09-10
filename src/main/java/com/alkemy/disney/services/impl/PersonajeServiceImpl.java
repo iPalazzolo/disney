@@ -6,7 +6,9 @@ import com.alkemy.disney.mappers.PersonajeMapper;
 import com.alkemy.disney.repositories.PersonajeRepository;
 import com.alkemy.disney.services.PersonajeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersonajeServiceImpl implements PersonajeService {
 
     @Autowired
