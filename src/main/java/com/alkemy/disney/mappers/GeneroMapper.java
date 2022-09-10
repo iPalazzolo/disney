@@ -30,9 +30,8 @@ public class GeneroMapper {
     public List<GeneroDTO> generoEntityList2DTO(List<GeneroEntity> entityList) {
         List<GeneroDTO> dtoList = new ArrayList<>();
 
-        for(GeneroEntity entity: entityList) {
+        for(GeneroEntity entity: entityList)
             dtoList.add(generoEntity2DTO(entity));
-        }
 
         return dtoList;
     }

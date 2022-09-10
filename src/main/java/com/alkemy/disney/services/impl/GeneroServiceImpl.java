@@ -21,9 +21,8 @@ public class GeneroServiceImpl implements GeneroService {
 
     public List<GeneroDTO> getAllGeneros() {
         List<GeneroEntity> entities = generoRepository.findAll();
-        List<GeneroDTO> result = generoMapper.generoEntityList2DTO(entities);
 
-        return result;
+        return generoMapper.generoEntityList2DTO(entities);
     }
 
     public GeneroDTO getGenero(Long id) {
@@ -38,9 +37,8 @@ public class GeneroServiceImpl implements GeneroService {
     public GeneroDTO save(GeneroDTO dto) {
         GeneroEntity entity = generoMapper.generoDTO2Entity(dto);
         GeneroEntity generoSaved = generoRepository.save(entity);
-        GeneroDTO result = generoMapper.generoEntity2DTO(generoSaved);
 
-        return result;
+        return generoMapper.generoEntity2DTO(generoSaved);
     }
 
     public void delete(Long id) {
